@@ -1,5 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --color-blood: #FF4F4F;
+  --color-white: #FFFFFF;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: #f9f9f9;
+  height: 100vh;
+}
+
+h1, h2, p {
+  color: #000000cc;
+}
+
+header, main, footer {
+  text-align: center;
+}
+
+header, .form, main {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 70px;
+}
+
+header h2 {
+  margin-bottom: 24px;
+}
+
+main h2 {
+  margin-bottom: 70px;
+}
+
+/* === HEADER === */
+header img.logo {
+  width: 150px;
+  margin: 35px 0;
+}
+
+header p {
+  font-size: 14px;
+  padding: 4px;
+}
+
+header button {
+  margin-top: 16px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  color: var(--color-white);
+  background-color: var(--color-blood);
+}
+
+/* === FORM === */
+section.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 45px;
+
+  background: var(--color-blood);
+  padding: 16px 64px;
+  border-radius: 6px;
+}
+
+.form h2 {
+  font-size: 20px;
+  color: var(--color-white);
+  text-align: right;
+}
+
+form input,
+form select,
+form button {
+  width: 100%;
+  margin-bottom: 4px;
+  padding: 8px;
+  border: none;
+  border: 1px solid #FFFFFFAA;
+  border-radius: 4px;
+}
+
+form input,
+form select {
+  background: transparent;
+}
+
+form input,
+form input::placeholder,
+form select {
+  color: #FFFFFFAA;
+}
+
+form select option {
+  color: #000;
+}
+
+form button {
+  background: var(--color-white);
+  font-weight: bold;
+}
+
+/* === FORM HIDDEN/SHOW === */
+section.form {
+  transition: all 500ms;
+}
+
+section.form.hidden {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  margin-top: -70px;
+}
+
+/* === MAIN === */
+main h2 span {
+  color: var(--color-blood);
+}
+
+main .donors {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+main .donor p {
+  margin-top: 24px;
+  font-size: 14px;
+}
+
+main .blood {
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--color-blood);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+main .blood::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: #FF4F4F11;
+  position: absolute;
+
+  border-radius: 50%;
+  border-top-right-radius: 0;
+  transform: rotate(-45deg);
+}
+
+/* === FOOTER === */
+footer {
+  width: 100%;
+  border-top: 1px solid #EEE;
+  margin-top: auto;
+  padding: 16px 0;
+}
+
