@@ -127,12 +127,13 @@ section.form.hidden {
 }
 
 /* === MAIN === */
-main h2 span {
+main h2 span,
+main .noneDonors span {
   color: var(--color-blood);
 }
 
-main .noneDonors span{
-  color: var(--color-blood);
+main .noneDonors img {
+  height: 200px;
 }
 
 main .donors {
