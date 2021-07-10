@@ -131,6 +131,10 @@ main h2 span {
   color: var(--color-blood);
 }
 
+main .noneDonors span{
+  color: var(--color-blood);
+}
+
 main .donors {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

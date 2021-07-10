@@ -42,14 +42,20 @@
   <main>
     <h2>Útimos <span>doadores</span></h2>
 
-    <section class="donors">
-     {% for donor in donors %}
-        <div class="donor">
-          <div class="blood">{{donor.blood}}</div>
-          <p>{{donor.name}}</p>
-        </div>
-     {% endfor %}
-    </section>
+    {% if donors == '' %}
+      <section class="noneDonors">
+        <h1>Não há <span>doadores</span> cadastrado!!!</h1>
+      </section>
+    {% else %}
+      <section class="donors">
+        {% for donor in donors %}
+          <div class="donor">
+            <div class="blood">{{donor.blood}}</div>
+            <p>{{donor.name}}</p>
+          </div>
+        {% endfor %}
+      </section>
+    {% endif %}
   </main>
 
   <footer>Com ❤️ Adrian Braga</footer>
