@@ -8,6 +8,7 @@ const routes = require('./routes');
 
 server.use(express.urlencoded({ extended: true }));
 server.use(express.static('./public'));
+server.use(express.static('./src/utils'));
 server.use(routes);
 
 server.set('view engine', 'njk');
